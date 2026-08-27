@@ -49,11 +49,11 @@ start -> Spark job -> sensor -> Greenplum table -> end
 
 Пайплайн формирует пять отчётов:
 
-1. `lineitems_report` — показатели по позициям заказов.
-2. `orders_report` — агрегаты заказов по месяцу, стране и приоритету.
-3. `customers_report` — статистика клиентов по регионам и сегментам.
-4. `suppliers_report` — статистика поставщиков по регионам и странам.
-5. `parts_report` — показатели товаров и стоимости поставок.
+1. `lineitems_report` - показатели по позициям заказов.
+2. `orders_report` - агрегаты заказов по месяцу, стране и приоритету.
+3. `customers_report` - статистика клиентов по регионам и сегментам.
+4. `suppliers_report` - статистика поставщиков по регионам и странам.
+5. `parts_report` - показатели товаров и стоимости поставок.
 
 ## Этапы работы
 
@@ -96,11 +96,11 @@ k8s/
 
 ## Настройка
 
-Секреты не хранятся в репозитории. Для локального запуска используются переменные окружения из `.env.example`, а в Kubernetes — Secret с именем `s3-credentials`.
+Секреты не хранятся в репозитории. Для локального запуска используются переменные окружения из `.env.example`, а в Kubernetes - Secret с именем `s3-credentials`.
 
 Файл `k8s/s3-secret.example.yaml` содержит только шаблон. Перед применением необходимо создать собственный Secret и не добавлять его значения в Git.
 
 В Airflow должны быть созданы подключения:
 
-- `kubernetes_default` — Kubernetes;
-- `greenplum_default` — Greenplum.
+- `kubernetes_default` - Kubernetes;
+- `greenplum_default` - Greenplum.
